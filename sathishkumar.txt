@@ -1,0 +1,505 @@
+Please enter a MongoDB connection string (Default: mongodb://localhost/):
+
+Current Mongosh Log ID: 65104d789e87edc97f4cafff
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.6
+Using MongoDB:          6.0.7
+Using Mongosh:          1.10.6
+mongosh 2.0.1 is available for download: https://www.mongodb.com/try/download/shell
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-09-24T18:47:46.782+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> use youtube
+switched to db youtube
+youtube> show collections
+products
+shop
+youtube> db.products.find()
+[
+  {
+    _id: ObjectId("65104c9685f03f8167612583"),
+    title: 'OnePlus Nord 3',
+    brand: 'oneplus',
+    category: 'mobile',
+    price: 33999,
+    qty: 25,
+    display: 6.74,
+    storage: { ram: 8, internal: 128 },
+    color: [ 'green', 'gray' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612584"),
+    title: 'OnePlus Nord CE 3',
+    brand: 'oneplus',
+    category: 'mobile',
+    price: 26999,
+    qty: 10,
+    display: 6.7,
+    storage: { ram: 12, internal: 256 },
+    color: [ 'aqua' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612585"),
+    title: 'Samsung Galaxy M34',
+    brand: 'samsung',
+    category: 'mobile',
+    price: 18999,
+    qty: 72,
+    display: 6.4,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'black', 'dark blue', 'blue' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612586"),
+    title: 'Samsung Galaxy M14',
+    brand: 'samsung',
+    category: 'mobile',
+    price: 14990,
+    qty: 8,
+    display: 6.58,
+    storage: { ram: 4, internal: 128 },
+    color: [ 'silver', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612587"),
+    title: 'realme narzo N53',
+    brand: 'realme',
+    category: 'mobile',
+    price: 8999,
+    qty: 10,
+    display: 6.72,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'gold', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612588"),
+    title: 'Vivo T2x',
+    brand: 'vivo',
+    category: 'mobile',
+    price: 13999,
+    qty: 4,
+    display: 6.58,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'silver', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612589"),
+    title: 'Redmi Note 12',
+    brand: 'xiaomi',
+    category: 'mobile',
+    price: 16999,
+    qty: 25,
+    display: 6.67,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'black', 'orange' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f816761258a"),
+    title: 'Xiaomi Pad 6',
+    brand: 'xiaomi',
+    category: 'tab',
+    price: 28999,
+    qty: 45,
+    display: 11,
+    storage: { ram: 8, internal: 256 },
+    color: [ 'grey', 'black', 'blue' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f816761258b"),
+    title: 'Apple iPad Air',
+    brand: 'apple',
+    category: 'tab',
+    price: 68400,
+    qty: 2,
+    display: 10.9,
+    storage: { ram: 8, internal: 64 },
+    color: [ 'grey', 'pink' ]
+  }
+]
+youtube> db.products.find({})
+[
+  {
+    _id: ObjectId("65104c9685f03f8167612583"),
+    title: 'OnePlus Nord 3',
+    brand: 'oneplus',
+    category: 'mobile',
+    price: 33999,
+    qty: 25,
+    display: 6.74,
+    storage: { ram: 8, internal: 128 },
+    color: [ 'green', 'gray' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612584"),
+    title: 'OnePlus Nord CE 3',
+    brand: 'oneplus',
+    category: 'mobile',
+    price: 26999,
+    qty: 10,
+    display: 6.7,
+    storage: { ram: 12, internal: 256 },
+    color: [ 'aqua' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612585"),
+    title: 'Samsung Galaxy M34',
+    brand: 'samsung',
+    category: 'mobile',
+    price: 18999,
+    qty: 72,
+    display: 6.4,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'black', 'dark blue', 'blue' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612586"),
+    title: 'Samsung Galaxy M14',
+    brand: 'samsung',
+    category: 'mobile',
+    price: 14990,
+    qty: 8,
+    display: 6.58,
+    storage: { ram: 4, internal: 128 },
+    color: [ 'silver', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612587"),
+    title: 'realme narzo N53',
+    brand: 'realme',
+    category: 'mobile',
+    price: 8999,
+    qty: 10,
+    display: 6.72,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'gold', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612588"),
+    title: 'Vivo T2x',
+    brand: 'vivo',
+    category: 'mobile',
+    price: 13999,
+    qty: 4,
+    display: 6.58,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'silver', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612589"),
+    title: 'Redmi Note 12',
+    brand: 'xiaomi',
+    category: 'mobile',
+    price: 16999,
+    qty: 25,
+    display: 6.67,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'black', 'orange' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f816761258a"),
+    title: 'Xiaomi Pad 6',
+    brand: 'xiaomi',
+    category: 'tab',
+    price: 28999,
+    qty: 45,
+    display: 11,
+    storage: { ram: 8, internal: 256 },
+    color: [ 'grey', 'black', 'blue' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f816761258b"),
+    title: 'Apple iPad Air',
+    brand: 'apple',
+    category: 'tab',
+    price: 68400,
+    qty: 2,
+    display: 10.9,
+    storage: { ram: 8, internal: 64 },
+    color: [ 'grey', 'pink' ]
+  }
+]
+youtube> db.products.find({"brand":"oneplus"})
+[
+  {
+    _id: ObjectId("65104c9685f03f8167612583"),
+    title: 'OnePlus Nord 3',
+    brand: 'oneplus',
+    category: 'mobile',
+    price: 33999,
+    qty: 25,
+    display: 6.74,
+    storage: { ram: 8, internal: 128 },
+    color: [ 'green', 'gray' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612584"),
+    title: 'OnePlus Nord CE 3',
+    brand: 'oneplus',
+    category: 'mobile',
+    price: 26999,
+    qty: 10,
+    display: 6.7,
+    storage: { ram: 12, internal: 256 },
+    color: [ 'aqua' ]
+  }
+]
+youtube> db.products.find({"brand":{$in:["apple","realme"]}});
+[
+  {
+    _id: ObjectId("65104c9685f03f8167612587"),
+    title: 'realme narzo N53',
+    brand: 'realme',
+    category: 'mobile',
+    price: 8999,
+    qty: 10,
+    display: 6.72,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'gold', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f816761258b"),
+    title: 'Apple iPad Air',
+    brand: 'apple',
+    category: 'tab',
+    price: 68400,
+    qty: 2,
+    display: 10.9,
+    storage: { ram: 8, internal: 64 },
+    color: [ 'grey', 'pink' ]
+  }
+]
+youtube> db.products.find({
+...     "category":"mobile",
+...     "qty":{$lt:20}
+... })
+[
+  {
+    _id: ObjectId("65104c9685f03f8167612584"),
+    title: 'OnePlus Nord CE 3',
+    brand: 'oneplus',
+    category: 'mobile',
+    price: 26999,
+    qty: 10,
+    display: 6.7,
+    storage: { ram: 12, internal: 256 },
+    color: [ 'aqua' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612586"),
+    title: 'Samsung Galaxy M14',
+    brand: 'samsung',
+    category: 'mobile',
+    price: 14990,
+    qty: 8,
+    display: 6.58,
+    storage: { ram: 4, internal: 128 },
+    color: [ 'silver', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612587"),
+    title: 'realme narzo N53',
+    brand: 'realme',
+    category: 'mobile',
+    price: 8999,
+    qty: 10,
+    display: 6.72,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'gold', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612588"),
+    title: 'Vivo T2x',
+    brand: 'vivo',
+    category: 'mobile',
+    price: 13999,
+    qty: 4,
+    display: 6.58,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'silver', 'black' ]
+  }
+]
+youtube> db.products.find({
+... $or:[
+...     {"category":"mobile"},
+...     {"qty":{$lt:20}}
+...   ]
+... })
+[
+  {
+    _id: ObjectId("65104c9685f03f8167612583"),
+    title: 'OnePlus Nord 3',
+    brand: 'oneplus',
+    category: 'mobile',
+    price: 33999,
+    qty: 25,
+    display: 6.74,
+    storage: { ram: 8, internal: 128 },
+    color: [ 'green', 'gray' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612584"),
+    title: 'OnePlus Nord CE 3',
+    brand: 'oneplus',
+    category: 'mobile',
+    price: 26999,
+    qty: 10,
+    display: 6.7,
+    storage: { ram: 12, internal: 256 },
+    color: [ 'aqua' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612585"),
+    title: 'Samsung Galaxy M34',
+    brand: 'samsung',
+    category: 'mobile',
+    price: 18999,
+    qty: 72,
+    display: 6.4,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'black', 'dark blue', 'blue' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612586"),
+    title: 'Samsung Galaxy M14',
+    brand: 'samsung',
+    category: 'mobile',
+    price: 14990,
+    qty: 8,
+    display: 6.58,
+    storage: { ram: 4, internal: 128 },
+    color: [ 'silver', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612587"),
+    title: 'realme narzo N53',
+    brand: 'realme',
+    category: 'mobile',
+    price: 8999,
+    qty: 10,
+    display: 6.72,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'gold', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612588"),
+    title: 'Vivo T2x',
+    brand: 'vivo',
+    category: 'mobile',
+    price: 13999,
+    qty: 4,
+    display: 6.58,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'silver', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612589"),
+    title: 'Redmi Note 12',
+    brand: 'xiaomi',
+    category: 'mobile',
+    price: 16999,
+    qty: 25,
+    display: 6.67,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'black', 'orange' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f816761258b"),
+    title: 'Apple iPad Air',
+    brand: 'apple',
+    category: 'tab',
+    price: 68400,
+    qty: 2,
+    display: 10.9,
+    storage: { ram: 8, internal: 64 },
+    color: [ 'grey', 'pink' ]
+  }
+]
+youtube> db.products.find({
+...   "category":"mobile",
+...   $or:[
+...     {"qty":{$lt:10}},
+...     {"title":/^r/}
+...   ]
+... })
+[
+  {
+    _id: ObjectId("65104c9685f03f8167612586"),
+    title: 'Samsung Galaxy M14',
+    brand: 'samsung',
+    category: 'mobile',
+    price: 14990,
+    qty: 8,
+    display: 6.58,
+    storage: { ram: 4, internal: 128 },
+    color: [ 'silver', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612587"),
+    title: 'realme narzo N53',
+    brand: 'realme',
+    category: 'mobile',
+    price: 8999,
+    qty: 10,
+    display: 6.72,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'gold', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612588"),
+    title: 'Vivo T2x',
+    brand: 'vivo',
+    category: 'mobile',
+    price: 13999,
+    qty: 4,
+    display: 6.58,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'silver', 'black' ]
+  }
+]
+youtube> db.products.find({
+...   "category":"mobile",
+...   $or:[
+...     {"qty":{$lt:10}},
+...     {"title":{$regex:'^r'}}
+...   ]
+... })
+[
+  {
+    _id: ObjectId("65104c9685f03f8167612586"),
+    title: 'Samsung Galaxy M14',
+    brand: 'samsung',
+    category: 'mobile',
+    price: 14990,
+    qty: 8,
+    display: 6.58,
+    storage: { ram: 4, internal: 128 },
+    color: [ 'silver', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612587"),
+    title: 'realme narzo N53',
+    brand: 'realme',
+    category: 'mobile',
+    price: 8999,
+    qty: 10,
+    display: 6.72,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'gold', 'black' ]
+  },
+  {
+    _id: ObjectId("65104c9685f03f8167612588"),
+    title: 'Vivo T2x',
+    brand: 'vivo',
+    category: 'mobile',
+    price: 13999,
+    qty: 4,
+    display: 6.58,
+    storage: { ram: 6, internal: 128 },
+    color: [ 'silver', 'black' ]
+  }
+]
+youtube>
